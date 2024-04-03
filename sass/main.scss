@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Formula Condensed';
+  src: url('./formula/Formular-Bold.woff2') format('woff2'),
+    url('./formula/Formular-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  font-family: 'Formula Condensed';
+}
+
+h3 {
+  letter-spacing: -2.4px;
+}

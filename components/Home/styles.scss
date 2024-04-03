@@ -1,0 +1,92 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.main {
+  width: 100%;
+  position: relative;
+}
+
+// TEAM SECTION
+.team {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/blue-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// CONTACT SECTION
+.contact {
+  background-color: $dark-blue;
+  color: $white;
+  padding: 70px;
+  padding-right: 250px;
+  @include flex-col;
+  align-items: flex-end;
+  gap: 150px;
+
+  article {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 85%;
+  }
+
+  .article__bottom {
+    p {
+      font-size: 12px;
+
+      span {
+        color: $opaque-white;
+      }
+    }
+
+    .last__paragraph {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.contact__div {
+  @include flex-col;
+
+  h3 {
+    font-size: 40px;
+    margin: 0;
+
+    span {
+      background-color: $pink;
+      color: $dark-blue;
+    }
+  }
+
+  .brief {
+    @include flex-row;
+    gap: 5px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.social__div {
+  @include flex-row;
+  gap: 10px;
+  margin-top: 20px;
+
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
