@@ -17,7 +17,8 @@
     li {
       @include flex-col;
       gap: 15px;
-      color: $opaque-white;
+      color: #1c2042;
+      opacity: 0.5;
       font-size: 12px;
     }
   }
@@ -37,6 +38,7 @@
 
 .say__hello {
   @include flex-col-center;
+  justify-content: center;
   position: fixed;
   z-index: 2;
   top: 3%;

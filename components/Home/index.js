@@ -8,7 +8,7 @@ import './styles.scss';
 import SayHello from '../Reusable/SayHello';
 import Logo from '../Reusable/Logo';
 
-export default function HomePage() {
+export default function HomePage({ imagesArr }) {
   return (
     <main className="main">
       <Logo />

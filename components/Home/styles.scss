@@ -1,6 +1,11 @@
 @import '../../sass/variables.scss';
 @import '../../sass/mixins.scss';
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .main {
   width: 100%;
   position: relative;
@@ -8,6 +13,91 @@
 
 // TEAM SECTION
 .team {
+  width: 100%;
+  @include flex-col;
+  align-items: flex-end;
+  background-color: $yellow;
+}
+
+.team__img {
+  position: relative;
+  @include flex-row;
+  padding: 130px 0;
+  overflow-x: scroll;
+  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 23rem);
+
+  &::-webkit-scrollbar {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 1px;
+    background-color: rgba(28, 32, 62, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 1px;
+    width: 50%;
+    background-color: $dark-blue;
+  }
+
+  div {
+    height: 31rem;
+  }
+
+  .member__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.cursor {
+  position: absolute;
+}
+
+.team__yellow {
+  background-color: $yellow;
+  padding: 150px 0 130px;
+  width: 85%;
+  color: $dark-blue;
+
+  h3 {
+    font-size: 72px;
+  }
+
+  article {
+    @include flex-row;
+    justify-content: space-between;
+    padding-top: 130px;
+
+    .bob__names {
+      @include flex-col;
+      gap: 30px;
+
+      span {
+        font-size: 12px;
+        color: $dark-blue;
+        opacity: 0.5;
+      }
+    }
+
+    .bob__names__right {
+      span {
+        svg {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.team__blue {
   width: 100%;
   height: 100vh;
   background-image: url('../../assets/blue-bg.jpg');
@@ -26,6 +116,7 @@
   background-color: $dark-blue;
   color: $white;
   padding: 70px;
+  padding-left: 0;
   padding-right: 250px;
   @include flex-col;
   align-items: flex-end;
